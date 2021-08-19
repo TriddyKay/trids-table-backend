@@ -1,11 +1,15 @@
 package com.dinner.club.tridstable
 
+import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.runApplication
+
 
 @SpringBootApplication
-class TridsTableApplication
-
-fun main(args: Array<String>) {
-	runApplication<TridsTableApplication>(*args)
+class TridsTableApplication {
+	companion object {
+		@JvmStatic
+		fun main(args: Array<String>) {
+			SpringApplication.run(TridsTableApplication::class.java, *args)
+		}
+	}
 }

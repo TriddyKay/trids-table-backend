@@ -6,12 +6,12 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("trial")
+@RequestMapping("/")
 class EchoResource(
   private val echoService: EchoService
 ) {
 
-  @GetMapping("/new-area-of-url")
+  @GetMapping("/echo")
   fun echo(): String {
     return echoService.echo()
   }
